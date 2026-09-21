@@ -1,0 +1,13 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFFFFF;
+  --color-dark: #000000;
+  --color-grey: #999999;
+
+  --font-family-base: 'Urbanist', sans-serif;
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(160)};
+  --transition-duration: 0.2s;
+}

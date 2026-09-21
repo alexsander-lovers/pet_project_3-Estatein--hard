@@ -1,0 +1,22 @@
+{
+  "emmet.includeLanguages": {
+    "html": "html",
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "php": "html"
+  },
+  "emmet.preferences": {
+    "filter.commentAfter": "<!-- /#$id.$class -->",
+    "format.lineBreak": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "html": {
+      "attr_quotes": "double",
+      "filters": "html"
+        }
+  },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.autoIndent": "full",
+  "editor.formatOnType": true
+}
