@@ -1,11 +1,14 @@
 @use 'helpers' as *;
 
 body {
+  @include fluid-text(18, 14);
+
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
   font-weight: 500;
   color: var(--color-grey);
+  background-color: var(--color-dark);
 }
 
 h1, .h1,
@@ -47,7 +50,37 @@ svg * {
 }
 
 a {
+  color: var(--color-light);
+
   &[class] {
     text-decoration: none;
   }
 }
+
+a:visited {
+  color: var(--color-accent);
+}
+
+a:focus-visible {
+  outline: rem(1) solid var(--color-accent);
+  outline-offset: rem(2);
+  color: var(--color-accent);
+}
+
+@supports not selector(:focus-visible) {
+  a:focus {
+    outline: rem(1) solid var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:hover,
+a:active {
+  color: var(--color-accent);
+}
+
+

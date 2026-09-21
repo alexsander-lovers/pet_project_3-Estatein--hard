@@ -20,7 +20,7 @@ global.app = {
   plugins: plugins
 };
 
-const copy = gulp.parallel(copyFiles, copyManifest, copyVideo, copyFavicons);
+const copy = gulp.parallel(copyFonts, copyFiles, copyManifest, copyVideo, copyFavicons);
 const images = gulp.parallel(convertToAvif, convertToWebp, optimizeRaster, copySvg);
 
 function watcher () {

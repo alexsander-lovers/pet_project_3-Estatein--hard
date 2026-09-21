@@ -5,4 +5,10 @@
 @use 'globals';
 
 @use 'blocks/header';
+@use 'blocks/logo';
+@use 'blocks/burger-menu';
+@use 'blocks/button-close';
+@use 'blocks/button';
+
+@use 'blocks/main';
 @use 'blocks/footer';

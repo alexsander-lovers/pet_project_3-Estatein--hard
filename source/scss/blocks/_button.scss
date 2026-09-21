@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+.button {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+.button:visited {
+  color: var(--color-light);
+}
+
+.button:focus-visible {
+  outline: rem(1) solid var(--color-accent);
+  outline-offset: rem(2);
+  color: var(--color-light);
+}
+
+@supports not selector(:focus-visible) {
+  .button:focus {
+    outline: rem(1) solid var(--color-accent);
+    color: var(--color-light);
+  }
+}
+
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  color: var(--color-light);
+}

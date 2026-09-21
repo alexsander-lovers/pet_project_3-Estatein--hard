@@ -1,0 +1,53 @@
+@use 'helpers' as *;
+
+.button-close {
+  @include hover {
+    background-color: var(--color-accent);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: rem(32);
+  height: rem(32);
+  border: none;
+  border-radius: rem(75);
+  background-color: var(--color-light-transparency);
+
+  @include laptop {
+    width: rem(26);
+    height: rem(26);
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: var(--color-light);
+    width: rem(12);
+    height: rem(1);
+
+    @include laptop {
+      width: rem(9);
+    }
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &:focus {
+    outline: rem(1) solid var(--color-light);
+    background-color: var(--color-accent);
+  }
+
+  &:focus::after,
+  &:focus::before {
+    background-color: var(--color-another-accent);
+  }
+}

@@ -1,0 +1,11 @@
+@use 'helpers' as *;
+
+.logo {
+  @include laptop {
+    width: rem(114);
+  }
+
+  @include mobile {
+    width: rem(94);
+  }
+}
