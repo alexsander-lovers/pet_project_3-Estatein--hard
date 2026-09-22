@@ -3,6 +3,10 @@
 .button {
   background-color: var(--color-accent);
   color: var(--color-light);
+  padding: rem(18) rem(24);
+  border: none;
+  border-radius: rem(10);
+  white-space: nowrap;
 }
 
 .button:visited {
@@ -10,14 +14,11 @@
 }
 
 .button:focus-visible {
-  outline: rem(1) solid var(--color-accent);
-  outline-offset: rem(2);
   color: var(--color-light);
 }
 
 @supports not selector(:focus-visible) {
   .button:focus {
-    outline: rem(1) solid var(--color-accent);
     color: var(--color-light);
   }
 }
@@ -28,5 +29,6 @@
 
 .button:hover,
 .button:active {
+  outline: rem(2) solid var(--color-another-accent);
   color: var(--color-light);
 }

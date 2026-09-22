@@ -142,8 +142,9 @@
     border-radius: rem(10);
     white-space: nowrap;
 
+
     @include hover {
-      outline: none;
+      outline: rem(2) solid var(--color-another-accent);
       background-color: var(--color-accent);
       color: var(--color-light);
     }
@@ -153,9 +154,23 @@
     }
   }
 
-  &__link:focus-visible {
-    outline: none;
+  &__link--is-active {
+    padding-block: rem(16);
     background-color: var(--color-accent);
+    color: var(--color-light);
+
+    @include laptop {
+      padding: rem(14) rem(20);
+    }
+  }
+
+  &__link:focus-visible {
+    outline: rem(2) solid var(--color-another-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+
+  &__link:visited {
     color: var(--color-light);
   }
 }

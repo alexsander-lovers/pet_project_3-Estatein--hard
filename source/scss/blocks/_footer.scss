@@ -1,1 +1,88 @@
 @use 'helpers' as *;
+
+.footer {
+  &__wrapper-border {
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: rem(1);
+      background-color: var(--color-grey-10);
+    }
+  }
+  &__wrapper-content {
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -5;
+    }
+
+    &::after {
+      background-image: image-set(
+        url('../images/footer/footer-left-bg-desktop.avif') type('image/avif'),
+        url('../images/header/footer-left-bg-desktop.webp') type('image/webp'),
+        url('../images/header/footer-left-bg-desktop.png') type('image/png')
+      );
+
+      background-position: left center;
+    }
+
+    &::before {
+      background-image: image-set(
+        url('../images/footer/footer-right-bg-desktop.avif') type('image/avif'),
+        url('../images/header/footer-right-bg-desktop.webp') type('image/webp'),
+        url('../images/header/footer-right-bg-desktop.png') type('image/png')
+      );
+      background-position: top right;
+    }
+  }
+  &__inner  {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(100);
+    padding-block: rem(100);
+
+    @include laptop {
+      padding-block: rem(60);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(30);
+      padding-block: rem(50);
+    }
+  }
+
+  &__inner-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+
+    @include mobile {
+      row-gap: rem(6);
+    }
+  }
+
+  &__button {
+    align-self: center;
+    flex-shrink: 1;
+
+    @include mobile {
+      align-self: auto;
+      // flex-grow: 1;
+    }
+  }
+}
