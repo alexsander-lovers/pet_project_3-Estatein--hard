@@ -1,1 +1,85 @@
 @use 'helpers' as *;
+
+.footer-navigation {
+  display: grid;
+
+  @include laptop-above {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: rem(100);
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(90);
+  }
+
+  @include mobile {
+    column-gap: rem(40);
+    row-gap: rem(40);
+  }
+
+  &__wrapper {
+    &--white-space {
+      white-space: nowrap;
+    }
+
+    @include mobile-s {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: rem(1);
+        background-color: var(--color-grey-10);
+        bottom: rem(-20);
+      }
+
+      &--small {
+          align-self: start;
+      }
+
+      &--margin-top {
+        margin-top: -15px
+      }
+
+      &:nth-child(even) {
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: rem(1);
+          height: 100%;
+          background-color: var(--color-grey-10);
+          left: rem(-20);
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(30);
+
+    @include laptop {
+      margin-bottom: rem(24);
+    }
+
+    @include mobile {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+
+    @include laptop {
+      row-gap: rem(16);
+    }
+
+    @include mobile {
+      row-gap: rem(8);
+    }
+  }
+}

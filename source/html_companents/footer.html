@@ -15,15 +15,17 @@
     </div>
   </div>
   <div class="footer__wrapper-body container">
-    <div class="footer__wrapper-form">
-      <a class="footer__logo logo" href="index.html">
-        <img class="logo__img" src="images/logo/logo.svg" alt="Logo site Estatein" width="160" height="48">
+    <div class="footer__wrapper-form form-footer">
+      <a class="form-footer__logo logo" href="index.html">
+        <img class="logo__img" src="images/logo/logo.svg" alt="Estatein" width="160" height="48" loading="lazy">
       </a>
-      <form class="form-footer" action="/" method="post">
-        <label class="visually-hidden" for="form-footer__field">email</label>
-        <input class="form-footer__field" type="email" name="email" id="form-footer__field"
-          placeholder="Enter Your Email" required>
-        <button class="visually-hidden" type="submit">Submit</button>
+      <form class="form-footer__form" action="/" method="post">
+        <label class="form-footer__title" for="form-footer__field">
+          <span class="visually-hidden">Email</span>
+          <input class="form-footer__field" type="email" name="email" id="form-footer__field"
+            placeholder="Enter Your Email" autocomplete="email" required>
+        </label>
+        <button class="form-footer__button" type="submit" aria-label="Send email"></button>
       </form>
     </div>
     <div class="footer__wrapper-link">
@@ -48,7 +50,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-navigation__wrapper">
+        <div class="footer-navigation__wrapper footer-navigation__wrapper--white-space">
           <p class="footer-navigation__text h5">About Us</p>
           <ul class="footer-navigation__list">
             <li class="footer-navigation__item">
@@ -68,7 +70,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-navigation__wrapper">
+        <div class="footer-navigation__wrapper footer-navigation__wrapper--small">
           <p class="footer-navigation__text h5">Properties</p>
           <ul class="footer-navigation__list">
             <li class="footer-navigation__item">
@@ -99,7 +101,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-navigation__wrapper">
+        <div class="footer-navigation__wrapper footer-navigation__wrapper--margin-top">
           <p class="footer-navigation__text h5">Contact Us</p>
           <ul class="footer-navigation__list">
             <li class="footer-navigation__item">
@@ -113,37 +115,37 @@
       </nav>
     </div>
   </div>
-  <div class="footer__wrapper-copyright">
-    <div class="footer__container container">
-      <div class="footer__wrapper-text">
-        <p class="footer__subtext">@2023 Estatein. All Rights Reserved.</p>
-        <a class="footer__sub-link" href="#">Terms & Conditions</a>
+  <div class="footer__wrapper-copyright copyright">
+    <div class="copyright__container container">
+      <div class="copyright__wrapper-text">
+        <p class="copyright__subtext">@2023 Estatein. All Rights Reserved.</p>
+        <a class="copyright__sub-link" href="#">Terms & Conditions</a>
       </div>
-      <ul class="footer__icons-list">
-        <li class="footer__icons-item">
-          <a class="footer__social-link" href="/">
-            <svg class="footer__icon" width="24" height="24">
+      <ul class="copyright__icons-list">
+        <li class="copyright__icons-item">
+          <a class="copyright__social-link" href="/" aria-label="Estatein on Facebook">
+            <svg class="copyright__icon" width="24" height="24">
               <use href="images/icons/sprite/icons.svg#facebook" />
             </svg>
           </a>
         </li>
-        <li class="footer__icons-item">
-          <a class="footer__social-link" href="/">
-            <svg class="footer__icon" width="24" height="24">
+        <li class="copyright__icons-item">
+          <a class="copyright__social-link" href="/" aria-label="Estatein on linkedin">
+            <svg class="copyright__icon" width="24" height="24">
               <use href="images/icons/sprite/icons.svg#linkedin" />
             </svg>
           </a>
         </li>
-        <li class="footer__icons-item">
-          <a class="footer__social-link" href="/">
-            <svg class="footer__icon" width="24" height="24">
+        <li class="copyright__icons-item">
+          <a class="copyright__social-link" href="/" aria-label="Estatein on twitter">
+            <svg class="copyright__icon" width="24" height="24">
               <use href="images/icons/sprite/icons.svg#twitter" />
             </svg>
           </a>
         </li>
-        <li class="footer__icons-item">
-          <a class="footer__social-link" href="/">
-            <svg class="footer__icon" width="24" height="24">
+        <li class="copyright__icons-item">
+          <a class="copyright__social-link" href="/" aria-label="Estatein on youtube">
+            <svg class="copyright__icon" width="24" height="24">
               <use href="images/icons/sprite/icons.svg#youtube" />
             </svg>
           </a>

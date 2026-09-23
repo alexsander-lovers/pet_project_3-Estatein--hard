@@ -29,20 +29,53 @@
     &::after {
       background-image: image-set(
         url('../images/footer/footer-left-bg-desktop.avif') type('image/avif'),
-        url('../images/header/footer-left-bg-desktop.webp') type('image/webp'),
-        url('../images/header/footer-left-bg-desktop.png') type('image/png')
+        url('../images/footer/footer-left-bg-desktop.webp') type('image/webp'),
+        url('../images/footer/footer-left-bg-desktop.png') type('image/png')
       );
-
       background-position: left center;
+
+      @include laptop {
+        background-image: image-set(
+          url('../images/footer/footer-left-bg-laptop.avif') type('image/avif'),
+          url('../images/footer/footer-left-bg-laptop.webp') type('image/webp'),
+          url('../images/footer/footer-left-bg-laptop.png') type('image/png')
+        );
+      }
+
+      @include mobile {
+        background-image: image-set(
+          url('../images/footer/footer-top-bg-mobile.avif') type('image/avif'),
+          url('../images/footer/footer-top-bg-mobile.webp') type('image/webp'),
+          url('../images/footer/footer-top-bg-mobile.png') type('image/png')
+        );
+        background-position: top center;
+      }
     }
 
     &::before {
       background-image: image-set(
         url('../images/footer/footer-right-bg-desktop.avif') type('image/avif'),
-        url('../images/header/footer-right-bg-desktop.webp') type('image/webp'),
-        url('../images/header/footer-right-bg-desktop.png') type('image/png')
+        url('../images/footer/footer-right-bg-desktop.webp') type('image/webp'),
+        url('../images/footer/footer-right-bg-desktop.png') type('image/png')
       );
       background-position: top right;
+
+      @include laptop {
+        background-image: image-set(
+          url('../images/footer/footer-right-bg-laptop.avif') type('image/avif'),
+          url('../images/footer/footer-right-bg-laptop.webp') type('image/webp'),
+          url('../images/footer/footer-right-bg-laptop.png') type('image/png')
+        );
+      }
+
+       @include mobile {
+        background-image: image-set(
+          url('../images/footer/footer-bottom-bg-mobile.avif') type('image/avif'),
+          url('../images/footer/footer-bottom-bg-mobile.webp') type('image/webp'),
+          url('../images/footer/footer-bottom-bg-mobile.png') type('image/png')
+        );
+        background-position: bottom center;
+      }
     }
   }
   &__inner  {
@@ -82,7 +115,22 @@
 
     @include mobile {
       align-self: auto;
-      // flex-grow: 1;
+    }
+  }
+
+  &__wrapper-body {
+    display: grid;
+    grid-template-columns: auto 62%;
+    padding-block: rem(100);
+
+    @include laptop {
+      padding-block: rem(80);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding-block: rem(50);
+      row-gap: rem(50);
     }
   }
 }

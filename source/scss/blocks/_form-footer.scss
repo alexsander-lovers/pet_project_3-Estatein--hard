@@ -1,1 +1,102 @@
 @use 'helpers' as *;
+
+.form-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(30);
+
+  @include laptop {
+    row-gap: rem(24);
+  }
+
+  @include mobile {
+    row-gap: rem(20);
+  }
+
+  &__button {
+    position: absolute;
+    border: none;
+    outline: none;
+    width: rem(30);
+    height: rem(30);
+    background-color: transparent;
+    background-image: url('../images/footer/footer-form-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+    top: 26%;
+    transform: translateY(-40%);
+    right: 35%;
+
+    @include laptop {
+      width: rem(24);
+      height: rem(24);
+      top: 15%;
+      transform: translateY(-60%);
+    }
+
+    @include tablet {
+      right: 20%;
+    }
+
+    @include mobile {
+      top: 75%;
+      right: 5%;
+    }
+  }
+
+  &__button:focus-visible,
+  &__button:hover,
+  &__button:active {
+    outline: rem(2) solid var(--color-another-accent);
+  }
+
+  &__title {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+    }
+
+    &::before {
+      width: rem(24);
+      height: rem(24);
+      background-image: url('../images/footer/footer-form-icon_1.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 5;
+      top: 50%;
+      transform: translateY(-50%);
+      left: rem(24);
+
+      @include laptop {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+  &__field {
+    padding: rem(18) rem(65);
+    color: var(--color-light);
+    background-color: transparent;
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(8);
+    width: 70%;
+
+    @include laptop {
+      padding: rem(14) rem(46);
+    }
+
+    @include tablet {
+      width: 90%;
+      padding-inline: rem(45);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
