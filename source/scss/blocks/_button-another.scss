@@ -1,0 +1,40 @@
+@use 'helpers' as *;
+
+.button-another{
+    padding: rem(14) rem(24);
+    background-color: var(--color-dark);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(10);
+    white-space: nowrap;
+
+
+    @include hover {
+      outline: rem(2) solid var(--color-another-accent);
+      background-color: var(--color-accent);
+      color: var(--color-light);
+    }
+
+    @include laptop {
+      padding: rem(12) rem(20);
+    }
+
+  &:focus-visible {
+    outline: rem(2) solid var(--color-another-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+
+  &:visited {
+    color: var(--color-light);
+  }
+
+    &--is-active {
+    padding-block: rem(16);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+
+    @include laptop {
+      padding: rem(14) rem(20);
+    }
+  }
+}

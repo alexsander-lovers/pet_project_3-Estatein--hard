@@ -9,6 +9,7 @@
 @use 'blocks/burger-menu';
 @use 'blocks/button-close';
 @use 'blocks/button';
+@use 'blocks/button-another';
 
 @use 'blocks/main';
 @use 'blocks/footer';
@@ -16,6 +17,7 @@
 @use 'blocks/footer-navigation';
 @use 'blocks/copyright';
 
-// .header {
-//   display: none;
-// }
+.header,
+.footer {
+  display: none;
+}
