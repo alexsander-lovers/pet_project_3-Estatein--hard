@@ -28,25 +28,49 @@
 
     &::after {
       background-image: image-set(
-        url('../images/footer/footer-left-bg-desktop.avif') type('image/avif'),
-        url('../images/footer/footer-left-bg-desktop.webp') type('image/webp'),
-        url('../images/footer/footer-left-bg-desktop.png') type('image/png')
+        url('../images/footer/footer-left-bg-desktop.avif') type('image/avif') 1x,
+        url('../images/footer/footer-left-bg-desktop@2x.avif') type('image/avif') 2x,
+        url('../images/footer/footer-left-bg-desktop@3x.avif') type('image/avif') 3x,
+
+        url('../images/footer/footer-left-bg-desktop.webp') type('image/webp') 1x,
+        url('../images/footer/footer-left-bg-desktop@2x.webp') type('image/webp') 2x,
+        url('../images/footer/footer-left-bg-desktop@3x.webp') type('image/webp') 3x,
+
+        url('../images/footer/footer-left-bg-desktop.png') type('image/png') 1x,
+        url('../images/footer/footer-left-bg-desktop@2x.png') type('image/png') 2x,
+        url('../images/footer/footer-left-bg-desktop@3x.png') type('image/png') 3x
       );
       background-position: left center;
 
       @include laptop {
         background-image: image-set(
-          url('../images/footer/footer-left-bg-laptop.avif') type('image/avif'),
-          url('../images/footer/footer-left-bg-laptop.webp') type('image/webp'),
-          url('../images/footer/footer-left-bg-laptop.png') type('image/png')
+          url('../images/footer/footer-left-bg-laptop.avif') type('image/avif') 1x,
+          url('../images/footer/footer-left-bg-laptop@2x.avif') type('image/avif') 2x,
+          url('../images/footer/footer-left-bg-laptop@3x.avif') type('image/avif') 3x,
+
+          url('../images/footer/footer-left-bg-laptop.webp') type('image/webp') 1x,
+          url('../images/footer/footer-left-bg-laptop@2x.webp') type('image/webp') 2x,
+          url('../images/footer/footer-left-bg-laptop@3x.webp') type('image/webp') 3x,
+
+          url('../images/footer/footer-left-bg-laptop.png') type('image/png') 1x,
+          url('../images/footer/footer-left-bg-laptop@2x.png') type('image/png') 2x,
+          url('../images/footer/footer-left-bg-laptop@3x.png') type('image/png') 3x
         );
       }
 
       @include mobile {
         background-image: image-set(
-          url('../images/footer/footer-top-bg-mobile.avif') type('image/avif'),
-          url('../images/footer/footer-top-bg-mobile.webp') type('image/webp'),
-          url('../images/footer/footer-top-bg-mobile.png') type('image/png')
+          url('../images/footer/footer-top-bg-mobile.avif') type('image/avif') 1x,
+          url('../images/footer/footer-top-bg-mobile@2x.avif') type('image/avif') 2x,
+          url('../images/footer/footer-top-bg-mobile@3x.avif') type('image/avif') 3x,
+
+          url('../images/footer/footer-top-bg-mobile.webp') type('image/webp') 1x,
+          url('../images/footer/footer-top-bg-mobile@2x.webp') type('image/webp') 2x,
+          url('../images/footer/footer-top-bg-mobile@3x.webp') type('image/webp') 3x,
+
+          url('../images/footer/footer-top-bg-mobile.png') type('image/png') 1x,
+          url('../images/footer/footer-top-bg-mobile@2x.png') type('image/png') 2x,
+          url('../images/footer/footer-top-bg-mobile@3x.png') type('image/png') 3x
         );
         background-position: top center;
       }
@@ -54,25 +78,49 @@
 
     &::before {
       background-image: image-set(
-        url('../images/footer/footer-right-bg-desktop.avif') type('image/avif'),
-        url('../images/footer/footer-right-bg-desktop.webp') type('image/webp'),
-        url('../images/footer/footer-right-bg-desktop.png') type('image/png')
+        url('../images/footer/footer-right-bg-desktop.avif') type('image/avif') 1x,
+        url('../images/footer/footer-right-bg-desktop@2x.avif') type('image/avif') 2x,
+        url('../images/footer/footer-right-bg-desktop@3x.avif') type('image/avif') 3x,
+
+        url('../images/footer/footer-right-bg-desktop.webp') type('image/webp') 1x,
+        url('../images/footer/footer-right-bg-desktop@2x.webp') type('image/webp') 2x,
+        url('../images/footer/footer-right-bg-desktop@3x.webp') type('image/webp') 3x,
+
+        url('../images/footer/footer-right-bg-desktop.png') type('image/png') 1x,
+        url('../images/footer/footer-right-bg-desktop@2x.png') type('image/png') 2x,
+        url('../images/footer/footer-right-bg-desktop@3x.png') type('image/png') 3x
       );
       background-position: top right;
 
       @include laptop {
         background-image: image-set(
-          url('../images/footer/footer-right-bg-laptop.avif') type('image/avif'),
-          url('../images/footer/footer-right-bg-laptop.webp') type('image/webp'),
-          url('../images/footer/footer-right-bg-laptop.png') type('image/png')
+          url('../images/footer/footer-right-bg-laptop.avif') type('image/avif') 1x,
+          url('../images/footer/footer-right-bg-laptop@2x.avif') type('image/avif') 2x,
+          url('../images/footer/footer-right-bg-laptop@3x.avif') type('image/avif') 3x,
+
+          url('../images/footer/footer-right-bg-laptop.webp') type('image/webp') 1x,
+          url('../images/footer/footer-right-bg-laptop@2x.webp') type('image/webp') 2x,
+          url('../images/footer/footer-right-bg-laptop@3x.webp') type('image/webp') 3x,
+
+          url('../images/footer/footer-right-bg-laptop.png') type('image/png') 1x,
+          url('../images/footer/footer-right-bg-laptop@2x.png') type('image/png') 2x,
+          url('../images/footer/footer-right-bg-laptop@3x.png') type('image/png') 3x
         );
       }
 
        @include mobile {
         background-image: image-set(
-          url('../images/footer/footer-bottom-bg-mobile.avif') type('image/avif'),
-          url('../images/footer/footer-bottom-bg-mobile.webp') type('image/webp'),
-          url('../images/footer/footer-bottom-bg-mobile.png') type('image/png')
+          url('../images/footer/footer-bottom-bg-mobile.avif') type('image/avif') 1x,
+          url('../images/footer/footer-bottom-bg-mobile@2x.avif') type('image/avif') 2x,
+          url('../images/footer/footer-bottom-bg-mobile@3x.avif') type('image/avif') 3x,
+
+          url('../images/footer/footer-bottom-bg-mobile.webp') type('image/webp') 1x,
+          url('../images/footer/footer-bottom-bg-mobile@2x.webp') type('image/webp') 2x,
+          url('../images/footer/footer-bottom-bg-mobile@3x.webp') type('image/webp') 3x,
+
+          url('../images/footer/footer-bottom-bg-mobile.png') type('image/png') 1x,
+          url('../images/footer/footer-bottom-bg-mobile@2x.png') type('image/png') 2x,
+          url('../images/footer/footer-bottom-bg-mobile@3x.png') type('image/png') 3x
         );
         background-position: bottom center;
       }

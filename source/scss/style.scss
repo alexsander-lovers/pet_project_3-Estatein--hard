@@ -12,12 +12,19 @@
 @use 'blocks/button-another';
 
 @use 'blocks/main';
+@use 'blocks/hero';
+@use 'blocks/achievements-block';
+
 @use 'blocks/footer';
 @use 'blocks/form-footer';
 @use 'blocks/footer-navigation';
 @use 'blocks/copyright';
 
-.header,
-.footer {
-  display: none;
-}
+// .header,
+// .footer {
+//   display: none;
+// }
+
+// .hero {
+//   display: none;
+// }

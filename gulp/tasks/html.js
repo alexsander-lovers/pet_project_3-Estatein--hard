@@ -24,7 +24,9 @@ export const html = () => {
     })))
     .pipe(app.plugins.if(app.isBuild, htmlMin({
       collapseWhitespace: true,
-      removeComments: true
+      removeComments: true,
+      minifyJS: true,
+      minifyCSS: true
     })))
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream());
