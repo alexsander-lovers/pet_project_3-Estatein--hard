@@ -1,0 +1,68 @@
+@use 'helpers' as *;
+
+.stars-top-title {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: rem(69);
+    height: rem(30);
+    top: rem(-30);
+    left: rem(-25);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: image-set(
+      url('../images/stars-top-title-desktop.avif') type('image/avif') 1x,
+      url('../images/stars-top-title-desktop@2x.avif') type('image/avif') 2x,
+      url('../images/stars-top-title-desktop@3x.avif') type('image/avif') 3x,
+
+      url('../images/stars-top-title-desktop.webp') type('image/webp') 1x,
+      url('../images/stars-top-title-desktop@2x.webp') type('image/webp') 2x,
+      url('../images/stars-top-title-desktop@3x.webp') type('image/webp') 3x,
+
+      url('../images/stars-top-title-desktop.png') type('image/png') 1x,
+      url('../images/stars-top-title-desktop@2x.png') type('image/png') 2x,
+      url('../images/stars-top-title-desktop@3x.png') type('image/png') 3x
+    );
+
+    @include laptop {
+      width: rem(55);
+      height: rem(24);
+
+      background-image: image-set(
+        url('../images/stars-top-title-laptop.avif') type('image/avif') 1x,
+        url('../images/stars-top-title-laptop@2x.avif') type('image/avif') 2x,
+        url('../images/stars-top-title-laptop@3x.avif') type('image/avif') 3x,
+
+        url('../images/stars-top-title-laptop.webp') type('image/webp') 1x,
+        url('../images/stars-top-title-laptop@2x.webp') type('image/webp') 2x,
+        url('../images/stars-top-title-laptop@3x.webp') type('image/webp') 3x,
+
+        url('../images/stars-top-title-laptop.png') type('image/png') 1x,
+        url('../images/stars-top-title-laptop@2x.png') type('image/png') 2x,
+        url('../images/stars-top-title-laptop@3x.png') type('image/png') 3x
+      );
+    }
+
+    @include mobile {
+      width: rem(46);
+      height: rem(20);
+      top: rem(-30);
+      left: rem(-5);
+      background-image: image-set(
+        url('../images/stars-top-title-mobile.avif') type('image/avif') 1x,
+        url('../images/stars-top-title-mobile@2x.avif') type('image/avif') 2x,
+        url('../images/stars-top-title-mobile@3x.avif') type('image/avif') 3x,
+
+        url('../images/stars-top-title-mobile.webp') type('image/webp') 1x,
+        url('../images/stars-top-title-mobile@2x.webp') type('image/webp') 2x,
+        url('../images/stars-top-title-mobile@3x.webp') type('image/webp') 3x,
+
+        url('../images/stars-top-title-mobile.png') type('image/png') 1x,
+        url('../images/stars-top-title-mobile@2x.png') type('image/png') 2x,
+        url('../images/stars-top-title-mobile@3x.png') type('image/png') 3x
+      );
+    }
+  }
+}

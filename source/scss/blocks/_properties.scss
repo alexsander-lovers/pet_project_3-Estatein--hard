@@ -1,0 +1,26 @@
+@use 'helpers' as *;
+
+.properties {
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+  }
+
+  @include laptop{
+    row-gap: rem(8);
+  }
+
+  @include mobile{
+    row-gap: rem(6);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 75% auto;
+  }
+
+  &__link {
+    justify-self: flex-end;
+  }
+}
