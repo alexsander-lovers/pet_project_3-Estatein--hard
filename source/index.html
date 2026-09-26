@@ -79,7 +79,6 @@
         </div>
       </div>
     </section>
-
     <section class="features" id="features">
       <div class="features__container">
         <ul class="features__list">
@@ -118,7 +117,6 @@
         </ul>
       </div>
     </section>
-
     <section class="properties" id="properties">
       <div class="properties__container container container-gap">
         <div class="properties__wrapper-text">
@@ -323,23 +321,39 @@
               </div>
             </li>
           </ul>
-          <nav class="card__navigation">
-            <div class="card__counter" aria-live="polite">
-              <span class="card__current card__current--is-active" id="js-pag-current">01</span>
-              <span class="card__divider">of</span>
-              <span class="card__total" id="js-pag-total">60</span>
+          <nav class="card__navigation block-navigation">
+            <div class="block-navigation__counter" aria-live="polite">
+              <span class="block-navigation__current block-navigation__current--is-active" id="js-pag-current">01</span>
+              <span class="block-navigation__divider">of</span>
+              <span class="block-navigation__total" id="js-pag-total">60</span>
             </div>
-            <div class="card__controls">
-              <button class="card__button card__button--prev" type="button" id="js-pag-prev" aria-label="Previous page">
+            <div class="block-navigation__controls">
+              <button class="block-navigation__button block-navigation__button--prev" type="button" id="js-pag-prev"
+                aria-label="Previous page">
               </button>
-              <button class="card__button card__button--next" type="button" id="js-pag-next" aria-label="Next page">
+              <button
+                class="block-navigation__button block-navigation__button--next block-navigation__button--is-active"
+                type="button" id="js-pag-next" aria-label="Next page">
               </button>
             </div>
           </nav>
         </div>
       </div>
-
     </section>
+    <!-- <section class="testimonials" id="testimonials">
+      <div class="testimonials__container container container-gap">
+        <div class="testimonials__wrapper-text">
+          <h2 class="testimonials__title stars-top-title">What Our Clients Say</h2>
+          <div class="testimonials__inner">
+            <p class="testimonials__subtext">Read the success stories and heartfelt testimonials from our valued
+              clients. Discover why they chose Estatein for their real estate needs.
+            </p>
+            <a class="testimonials__link button-another button-another--section" href="#">View All
+              Testimonials</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
   </main>
   @@include('html_components/footer.html')
   <script src="js/app.min.js" defer></script>

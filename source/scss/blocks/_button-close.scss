@@ -41,13 +41,16 @@
     transform: rotate(-45deg);
   }
 
-  &:focus {
-    outline: rem(1) solid var(--color-light);
-    background-color: var(--color-accent);
-  }
+   &:focus-visible {
+        outline: rem(2) solid var(--color-another-accent);
+        border-color: var(--color-another-accent);
+        background-color: var(--color-accent);
+      }
 
-  &:focus::after,
-  &:focus::before {
-    background-color: var(--color-another-accent);
-  }
+      &:hover,
+      &:active {
+        outline: rem(2) solid var(--color-another-accent);
+        background-color: var(--color-accent);
+        border-color: var(--color-another-accent);
+      }
 }

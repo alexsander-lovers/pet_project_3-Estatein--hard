@@ -7,28 +7,19 @@
   border: none;
   border-radius: rem(10);
   white-space: nowrap;
-}
 
-.button:visited {
-  color: var(--color-light);
-}
-
-.button:focus-visible {
-  color: var(--color-light);
-}
-
-@supports not selector(:focus-visible) {
-  .button:focus {
+  &:focus-visible {
+    outline: rem(2) solid var(--color-another-accent);
     color: var(--color-light);
   }
-}
 
-.button:focus:not(:focus-visible) {
-  outline: none;
-}
+  &:visited {
+    color: var(--color-light);
+  }
 
-.button:hover,
-.button:active {
-  outline: rem(2) solid var(--color-another-accent);
-  color: var(--color-light);
+  &:hover,
+  &:active {
+    outline: rem(2) solid var(--color-another-accent);
+    color: var(--color-light);
+  }
 }

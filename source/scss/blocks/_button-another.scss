@@ -7,24 +7,26 @@
     border-radius: rem(10);
     white-space: nowrap;
 
-
-    @include hover {
-      outline: rem(2) solid var(--color-another-accent);
-      background-color: var(--color-accent);
-      color: var(--color-light);
-    }
-
     @include laptop {
       padding: rem(12) rem(20);
     }
 
   &:focus-visible {
     outline: rem(2) solid var(--color-another-accent);
+    border-color: var(--color-another-accent);
     background-color: var(--color-accent);
     color: var(--color-light);
   }
 
   &:visited {
+    color: var(--color-light);
+  }
+
+  &:hover,
+  &:active {
+    outline: rem(2) solid var(--color-another-accent);
+    background-color: var(--color-accent);
+    border-color: var(--color-another-accent);
     color: var(--color-light);
   }
 

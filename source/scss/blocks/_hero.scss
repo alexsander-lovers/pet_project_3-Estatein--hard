@@ -174,6 +174,8 @@
       );
 
       @include laptop {
+        width: rem(129);
+        height: rem(129);
         background-image: image-set(
           url('../images/hero/hero-laptop-1.avif') type('image/avif') 1x,
           url('../images/hero/hero-laptop-1@2x.avif') type('image/avif') 2x,
@@ -190,8 +192,10 @@
       }
 
       @include tablet {
+        width: rem(117);
+        height: rem(117);
         top: revert-layer;
-        bottom: -10%;
+        bottom: -5%;
         left: 10%;
         background-image: image-set(
           url('../images/hero/hero-mobile-1.avif') type('image/avif') 1x,

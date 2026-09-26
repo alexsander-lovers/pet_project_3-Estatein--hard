@@ -72,7 +72,7 @@ input:focus {
 
 
 input:disabled {
-  outline: rem(2) solid red;
+  outline: rem(2) solid var(--color-error);
 }
 
 input:disabled,

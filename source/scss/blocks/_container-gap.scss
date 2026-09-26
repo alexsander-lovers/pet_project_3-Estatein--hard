@@ -3,16 +3,16 @@
 .container-gap {
     display: flex;
     flex-direction: column;
-    padding-block: rem(150);
+    padding-top: rem(150);
     row-gap: rem(80);
 
     @include laptop {
-      padding-block: rem(120);
+      padding-top: rem(120);
       row-gap: rem(60);
     }
 
     @include mobile {
-      padding-block: rem(80);
+      padding-top: rem(80);
       row-gap: rem(40);
     }
 }
