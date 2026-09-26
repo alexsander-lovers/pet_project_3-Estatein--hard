@@ -1,0 +1,38 @@
+@use 'helpers' as *;
+
+.faq {
+  &__container {
+    padding-bottom: rem(120);
+
+    @include laptop {
+        padding-bottom: rem(120);
+      }
+
+    @include mobile {
+      padding-bottom: rem(80);
+    }
+  }
+
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+
+    @include laptop{
+      row-gap: rem(8);
+    }
+
+    @include mobile{
+      row-gap: rem(6);
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 75% auto;
+  }
+
+  &__link {
+    justify-self: flex-end;
+  }
+}

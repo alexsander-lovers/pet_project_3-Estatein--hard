@@ -117,7 +117,7 @@
         </ul>
       </div>
     </section>
-    <section class="properties" id="properties">
+    <section class="properties">
       <div class="properties__container container container-gap">
         <div class="properties__wrapper-text">
           <h2 class="properties__title stars-top-title">Featured Properties</h2>
@@ -131,8 +131,8 @@
           </div>
         </div>
         <div class="properties__wrapper-card card">
-          <ul class="card__list">
-            <li class="card__item">
+          <ul class="card__list list">
+            <li class="card__item list__item">
               <div class="card__wrapper">
                 <div class="card__wrapper-img">
                   <picture>
@@ -157,10 +157,10 @@
                   <div class="card__content">
                     <div class="card__subtext">
                       <span>A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood..</span>
-                      <span class="card__subtext-more card__subtext-more--hidden">
+                      <span class="card__subtext-more card__subtext-more--hidden" data-js-text-hidden>
                         An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.
                       </span>
-                      <button class="card__button-text" type="button">Read More</button>
+                      <button class="card__button-text" type="button" data-js-button-open-text>Read More</button>
                     </div>
                   </div>
                 </div>
@@ -195,7 +195,7 @@
                 </div>
               </div>
             </li>
-            <li class="card__item">
+            <li class="card__item list__item">
               <div class="card__wrapper">
                 <div class="card__wrapper-img">
                   <picture>
@@ -220,10 +220,10 @@
                   <div class="card__content">
                     <div class="card__subtext">
                       <span>A chic and fully-furnished 2-bedroom apartment with panoramic city views...</span>
-                      <span class="card__subtext-more card__subtext-more--hidden">
+                      <span class="card__subtext-more card__subtext-more--hidden" data-js-text-hidden>
                         An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.
                       </span>
-                      <button class="card__button-text" type="button">Read More</button>
+                      <button class="card__button-text" type="button" data-js-button-open-text>Read More</button>
                     </div>
                   </div>
                 </div>
@@ -258,7 +258,7 @@
                 </div>
               </div>
             </li>
-            <li class="card__item">
+            <li class="card__item list__item">
               <div class="card__wrapper">
                 <div class="card__wrapper-img">
                   <picture>
@@ -283,10 +283,10 @@
                   <div class="card__content">
                     <div class="card__subtext">
                       <span>An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... </span>
-                      <span class="card__subtext-more card__subtext-more--hidden">
+                      <span class="card__subtext-more card__subtext-more--hidden" data-js-text-hidden>
                         An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.
                       </span>
-                      <button class="card__button-text" type="button">Read More</button>
+                      <button class="card__button-text" type="button" data-js-button-open-text>Read More</button>
                     </div>
                   </div>
                 </div>
@@ -357,8 +357,8 @@
           </div>
         </div>
         <div class="testimonials__comment comment">
-          <ul class="comment__list">
-            <li class="comment__item">
+          <ul class="comment__list list">
+            <li class="comment__item list__item">
               <article class="comment__wrapper">
                 <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
                   <span class="comment__star" aria-hidden="true"></span>
@@ -398,7 +398,7 @@
                 </cite>
               </article>
             </li>
-            <li class="comment__item">
+            <li class="comment__item list__item">
               <article class="comment__wrapper">
                 <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
                   <span class="comment__star" aria-hidden="true"></span>
@@ -438,7 +438,7 @@
                 </cite>
               </article>
             </li>
-            <li class="comment__item">
+            <li class="comment__item list__item">
               <article class="comment__wrapper">
                 <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
                   <span class="comment__star" aria-hidden="true"></span>
@@ -481,6 +481,76 @@
           </ul>
           <nav class="comment__navigation block-navigation">
             <a class="comment__link button-another button-another--section button-another--is-mobile" href="#">View All
+              Testimonials</a>
+            <div class="block-navigation__counter" aria-live="polite">
+              <span class="block-navigation__current block-navigation__current--is-active" data-js-pag-current>01</span>
+              <span class="block-navigation__divider">of</span>
+              <span class="block-navigation__total" data-js-pag-total>10</span>
+            </div>
+            <div class="block-navigation__controls">
+              <button class="block-navigation__button block-navigation__button--prev" type="button" data-js-pag-prev
+                aria-label="Previous page">
+              </button>
+              <button
+                class="block-navigation__button block-navigation__button--next block-navigation__button--is-active"
+                type="button" data-js-pag-next aria-label="Next page">
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="faq__container container container-gap">
+        <div class="faq__wrapper-text">
+          <h2 class="faq__title stars-top-title">Frequently Asked Questions</h2>
+          <div class="faq__inner">
+            <p class="faq__subtext">Find answers to common questions about Estatein's services, property listings, and
+              the real estate process. We're here to provide clarity and assist you every step of the way.
+            </p>
+            <a class="faq__link button-another button-another--section button-another--is-hidden" href="#">View All
+              FAQ’s</a>
+          </div>
+        </div>
+        <div class="faq__questions questions">
+          <ul class="questions__list list">
+            <li class="questions__list list__item">
+              <h3 class="questions__subtitle">How do I search for properties on Estatein?</h3>
+              <div class="questions__subtext">
+                <span>Learn how to use our user-friendly search tools to find properties that match your
+                  criteria.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Learn how to use our user-friendly search tools to find properties that match your criteria.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+            <li class="questions__list list__item">
+              <h3 class="questions__subtitle">What documents do I need to sell my property through Estatein?</h3>
+              <div class="questions__subtext">
+                <span>Find out about the necessary documentation for listing your property with us.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Find out about the necessary documentation for listing your property with us.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+            <li class="questions__list list__item">
+              <h3 class="questions__subtitle">How can I contact an Estatein agent?</h3>
+              <div class="questions__subtext">
+                <span>Discover the different ways you can get in touch with our experienced agents.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Discover the different ways you can get in touch with our experienced agents.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+          </ul>
+          <nav class="faq__navigation block-navigation">
+            <a class="faq__link button-another button-another--section button-another--is-mobile" href="#">View All
               Testimonials</a>
             <div class="block-navigation__counter" aria-live="polite">
               <span class="block-navigation__current block-navigation__current--is-active" data-js-pag-current>01</span>

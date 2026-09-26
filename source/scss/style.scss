@@ -15,6 +15,7 @@
 @use 'blocks/hero';
 @use 'blocks/achievements-block';
 @use 'blocks/features';
+@use 'blocks/list';
 @use 'blocks/properties';
 @use 'blocks/container-gap';
 @use 'blocks/stars-top-title';
@@ -22,6 +23,9 @@
 @use 'blocks/block-navigation';
 @use 'blocks/testimonials';
 @use 'blocks/comment';
+@use 'blocks/faq';
+@use 'blocks/questions';
+
 
 @use 'blocks/footer';
 @use 'blocks/form-footer';
