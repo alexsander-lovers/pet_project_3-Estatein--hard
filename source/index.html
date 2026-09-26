@@ -125,7 +125,8 @@
             <p class="properties__subtext">Explore our handpicked selection of featured properties. Each listing offers
               a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more
               information.</p>
-            <a class="properties__link button-another button-another--section" href="properties.html">View All
+            <a class="properties__link button-another button-another--section button-another--is-hidden"
+              href="properties.html">View All
               Properties</a>
           </div>
         </div>
@@ -322,25 +323,27 @@
             </li>
           </ul>
           <nav class="card__navigation block-navigation">
+            <a class="card__link button-another button-another--section button-another--is-mobile"
+              href="properties.html">View All Properties</a>
             <div class="block-navigation__counter" aria-live="polite">
-              <span class="block-navigation__current block-navigation__current--is-active" id="js-pag-current">01</span>
+              <span class="block-navigation__current block-navigation__current--is-active" data-js-pag-current>01</span>
               <span class="block-navigation__divider">of</span>
-              <span class="block-navigation__total" id="js-pag-total">60</span>
+              <span class="block-navigation__total" data-js-pag-total>60</span>
             </div>
             <div class="block-navigation__controls">
-              <button class="block-navigation__button block-navigation__button--prev" type="button" id="js-pag-prev"
+              <button class="block-navigation__button block-navigation__button--prev" type="button" data-js-pag-prev
                 aria-label="Previous page">
               </button>
               <button
                 class="block-navigation__button block-navigation__button--next block-navigation__button--is-active"
-                type="button" id="js-pag-next" aria-label="Next page">
+                type="button" data-js-pag-next aria-label="Next page">
               </button>
             </div>
           </nav>
         </div>
       </div>
     </section>
-    <!-- <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials">
       <div class="testimonials__container container container-gap">
         <div class="testimonials__wrapper-text">
           <h2 class="testimonials__title stars-top-title">What Our Clients Say</h2>
@@ -348,12 +351,155 @@
             <p class="testimonials__subtext">Read the success stories and heartfelt testimonials from our valued
               clients. Discover why they chose Estatein for their real estate needs.
             </p>
-            <a class="testimonials__link button-another button-another--section" href="#">View All
+            <a class="testimonials__link button-another button-another--section button-another--is-hidden" href="#">View
+              All
               Testimonials</a>
           </div>
         </div>
+        <div class="testimonials__comment comment">
+          <ul class="comment__list">
+            <li class="comment__item">
+              <article class="comment__wrapper">
+                <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                </div>
+                <div class="comment__inner">
+                  <h3 class="comment__subtitle">Exceptional Service!</h3>
+                  <p class="comment__subtext">Our experience with Estatein was outstanding. Their team's dedication
+                    and professionalism made finding our dream home a breeze. Highly recommended!</p>
+                </div>
+                <cite class="comment__person">
+                  <div class="comment__wrapper-img">
+                    <picture>
+                      <source type="image/avif" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-1.avif 1x, images/testimonials/testimonials-laptop-1@2x.avif 2x, images/testimonials/testimonials-laptop-1@3x.avif 3x">
+                      <source type="image/avif"
+                        srcset="images/testimonials/testimonials-desktop-1.avif 1x, images/testimonials/testimonials-desktop-1@2x.avif 2x, images/testimonials/testimonials-desktop-1@3x.avif 3x">
+                      <source type="image/webp" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-1.webp 1x, images/testimonials/testimonials-laptop-1@2x.webp 2x, images/testimonials/testimonials-laptop-1@3x.webp 3x">
+                      <source type="image/webp"
+                        srcset="images/testimonials/testimonials-desktop-1.webp 1x, images/testimonials/testimonials-desktop-1@2x.webp 2x, images/testimonials/testimonials-desktop-1@3x.webp 3x">
+                      <source type="image/png" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-1.png 1x, images/testimonials/testimonials-laptop-1@2x.png 2x, images/testimonials/testimonials-laptop-1@3x.png 3x">
+                      <source type="image/png"
+                        srcset="images/testimonials/testimonials-desktop-1.png 1x, images/testimonials/testimonials-desktop-1@2x.png 2x, images/testimonials/testimonials-desktop-1@3x.png 3x">
+                      <img class="comment__img" src="images/testimonials/testimonials-desktop-1.png" width="60"
+                        height="60" alt="Wade Warren" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="comment__text">
+                    <span class="comment__name-person">Wade Warren</span>
+                    <span class="comment__location">USA, California</span>
+                  </div>
+                </cite>
+              </article>
+            </li>
+            <li class="comment__item">
+              <article class="comment__wrapper">
+                <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                </div>
+                <div class="comment__inner">
+                  <h3 class="comment__subtitle">Efficient and Reliable</h3>
+                  <p class="comment__subtext">Estatein provided us with top-notch service. They helped us sell our
+                    property quickly and at a great price. We couldn't be happier with the results.</p>
+                </div>
+                <cite class="comment__person">
+                  <div class="comment__wrapper-img">
+                    <picture>
+                      <source type="image/avif" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-2.avif 1x, images/testimonials/testimonials-laptop-2@2x.avif 2x, images/testimonials/testimonials-laptop-2@3x.avif 3x">
+                      <source type="image/avif"
+                        srcset="images/testimonials/testimonials-desktop-2.avif 1x, images/testimonials/testimonials-desktop-2@2x.avif 2x, images/testimonials/testimonials-desktop-2@3x.avif 3x">
+                      <source type="image/webp" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-2.webp 1x, images/testimonials/testimonials-laptop-2@2x.webp 2x, images/testimonials/testimonials-laptop-2@3x.webp 3x">
+                      <source type="image/webp"
+                        srcset="images/testimonials/testimonials-desktop-2.webp 1x, images/testimonials/testimonials-desktop-2@2x.webp 2x, images/testimonials/testimonials-desktop-2@3x.webp 3x">
+                      <source type="image/png" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-2.png 1x, images/testimonials/testimonials-laptop-2@2x.png 2x, images/testimonials/testimonials-laptop-2@3x.png 3x">
+                      <source type="image/png"
+                        srcset="images/testimonials/testimonials-desktop-2.png 1x, images/testimonials/testimonials-desktop-2@2x.png 2x, images/testimonials/testimonials-desktop-2@3x.png 3x">
+                      <img class="comment__img" src="images/testimonials/testimonials-desktop-2.png" width="60"
+                        height="60" alt="Emelie Thomson" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="comment__text">
+                    <span class="comment__name-person">Emelie Thomson</span>
+                    <span class="comment__location">USA, Florida</span>
+                  </div>
+                </cite>
+              </article>
+            </li>
+            <li class="comment__item">
+              <article class="comment__wrapper">
+                <div class="comment__stars" role="img" aria-label="Rated 5 out of 5 stars">
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                  <span class="comment__star" aria-hidden="true"></span>
+                </div>
+                <div class="comment__inner">
+                  <h3 class="comment__subtitle">Trusted Advisors</h3>
+                  <p class="comment__subtext">The Estatein team guided us through the entire buying process. Their
+                    knowledge and commitment to our needs were impressive. Thank you for your support!</p>
+                </div>
+                <cite class="comment__person">
+                  <div class="comment__wrapper-img">
+                    <picture>
+                      <source type="image/avif" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-3.avif 1x, images/testimonials/testimonials-laptop-3@2x.avif 2x, images/testimonials/testimonials-laptop-3@3x.avif 3x">
+                      <source type="image/avif"
+                        srcset="images/testimonials/testimonials-desktop-3.avif 1x, images/testimonials/testimonials-desktop-3@2x.avif 2x, images/testimonials/testimonials-desktop-3@3x.avif 3x">
+                      <source type="image/webp" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-3.webp 1x, images/testimonials/testimonials-laptop-3@2x.webp 2x, images/testimonials/testimonials-laptop-3@3x.webp 3x">
+                      <source type="image/webp"
+                        srcset="images/testimonials/testimonials-desktop-3.webp 1x, images/testimonials/testimonials-desktop-3@2x.webp 2x, images/testimonials/testimonials-desktop-3@3x.webp 3x">
+                      <source type="image/png" media="(max-width: 1440px)"
+                        srcset="images/testimonials/testimonials-laptop-3.png 1x, images/testimonials/testimonials-laptop-3@2x.png 2x, images/testimonials/testimonials-laptop-3@3x.png 3x">
+                      <source type="image/png"
+                        srcset="images/testimonials/testimonials-desktop-3.png 1x, images/testimonials/testimonials-desktop-3@2x.png 2x, images/testimonials/testimonials-desktop-2@3x.png 3x">
+                      <img class="comment__img" src="images/testimonials/testimonials-desktop-3.png" width="60"
+                        height="60" alt="John Mans" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="comment__text">
+                    <span class="comment__name-person">John Mans</span>
+                    <span class="comment__location">USA, Nevada</span>
+                  </div>
+                </cite>
+              </article>
+            </li>
+          </ul>
+          <nav class="comment__navigation block-navigation">
+            <a class="comment__link button-another button-another--section button-another--is-mobile" href="#">View All
+              Testimonials</a>
+            <div class="block-navigation__counter" aria-live="polite">
+              <span class="block-navigation__current block-navigation__current--is-active" data-js-pag-current>01</span>
+              <span class="block-navigation__divider">of</span>
+              <span class="block-navigation__total" data-js-pag-total>10</span>
+            </div>
+            <div class="block-navigation__controls">
+              <button class="block-navigation__button block-navigation__button--prev" type="button" data-js-pag-prev
+                aria-label="Previous page">
+              </button>
+              <button
+                class="block-navigation__button block-navigation__button--next block-navigation__button--is-active"
+                type="button" data-js-pag-next aria-label="Next page">
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
-    </section> -->
+    </section>
   </main>
   @@include('html_components/footer.html')
   <script src="js/app.min.js" defer></script>

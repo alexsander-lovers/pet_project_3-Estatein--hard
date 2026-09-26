@@ -43,4 +43,16 @@
   &--section {
     background-color: var(--color-grey-15);
   }
+
+  @include mobile-above {
+    &--is-mobile {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    &--is-hidden {
+      display: none;
+    }
+  }
 }

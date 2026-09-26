@@ -41,7 +41,7 @@
     transform: rotate(-45deg);
   }
 
-   &:focus-visible {
+      &:focus-visible {
         outline: rem(2) solid var(--color-another-accent);
         border-color: var(--color-another-accent);
         background-color: var(--color-accent);

@@ -20,6 +20,8 @@
 @use 'blocks/stars-top-title';
 @use 'blocks/card';
 @use 'blocks/block-navigation';
+@use 'blocks/testimonials';
+@use 'blocks/comment';
 
 @use 'blocks/footer';
 @use 'blocks/form-footer';
@@ -27,10 +29,10 @@
 @use 'blocks/copyright';
 
 // .header,
-// .footer {
-//   display: none;
-// }
-
-// .hero {
+// .footer,
+// .hero,
+// .features,
+// .properties,
+// .testimonials {
 //   display: none;
 // }

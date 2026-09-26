@@ -1,97 +1,96 @@
 @use 'helpers' as *;
 
 .block-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(20);
+  border-top: rem(1) solid var(--color-grey-10);
+
+  @include laptop {
+    padding-top: rem(16);
+  }
+
+  @include mobile {
+    justify-content: center;
+    gap: rem(15);
+  }
+
+  @include mobile-s{
+    gap: rem(5);
+  }
+
+  &__counter {
+
+    @include mobile {
+      order: 2;
+      white-space: nowrap;
+    }
+  }
+
+  &__current {
+    &--is-active {
+      color: var(--color-light);
+    }
+  }
+
+  &__controls {
     display: flex;
-    justify-content: space-between;
-    padding-top: rem(20);
-    border-top: rem(1) solid var(--color-grey-10);
+    column-gap: rem(10);
 
-    @include laptop {
-      padding-top: rem(16);
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__button {
+    position: relative;
+    padding: rem(28);
+    background-color: transparent;
+    border: rem(1) solid var(--color-grey-15);
+    border-radius: rem(69);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    @include mobile {
+      &--prev { order: 1; }
+      &--next { order: 3; }
     }
 
-    &__current {
-      &--is-active {
-        color: var(--color-light);
-      }
+    &--next {
+      transform: rotate(-180deg);
     }
 
-    &__controls {
-      display: flex;
-      column-gap: rem(10);
+    &::after {
+      @include abs-center;
+      content: '';
+      width: rem(30);
+      height: rem(30);
+      mask-repeat: no-repeat;
+      mask-image: url('../images/icons/arrow-left.svg');
+      background-color: var(--color-grey-50);
+      z-index: 1;
+      transition: background-color 0.2s;
     }
-    &__button {
-      position: relative;
-      padding: rem(28);
-      background-color: transparent;
-      border: none;
-      border: rem(1) solid var(--color-grey-15);
-      border-radius: rem(69);
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      outline: rem(2) solid var(--color-another-accent);
+      border-color: var(--color-another-accent);
+      background-color: var(--color-accent);
 
       &::after {
-        @include abs-center();
-
-        position: absolute;
-        content: '';
-        width: rem(30);
-        height: rem(30);
-        mask-repeat: no-repeat;
-        mask-image: url('../images/icons/arrow-left.svg');
-        background-color: var(--color-grey-50);
-        z-index: 1;
+        background-color: var(--color-light);
       }
+    }
 
-      &--next {
-        transform: rotate(-180deg);
-      }
+    &--is-active {
+      background-color: var(--color-grey-15);
 
-      &:focus-visible {
-        outline: rem(2) solid var(--color-another-accent);
-        border-color: var(--color-another-accent);
-        background-color: var(--color-accent);
-
-        &::after {
-          background-color: var(--color-light);
-        }
-      }
-
-      &:hover,
-      &:active {
-        outline: rem(2) solid var(--color-another-accent);
-        background-color: var(--color-accent);
-        border-color: var(--color-another-accent);
-
-        &::after {
-          background-color: var(--color-light);
-        }
-      }
-
-      &--is-active {
-        background-color: var(--color-grey-15);
-
-        &::after {
-          background-color: var(--color-light);
-        }
-
-        &:focus-visible {
-          outline: rem(2) solid var(--color-another-accent);
-          border-color: var(--color-another-accent);
-          background-color: var(--color-accent);
-        }
-
-        &:hover,
-        &:active {
-          outline: rem(2) solid var(--color-another-accent);
-          background-color: var(--color-accent);
-          border-color: var(--color-another-accent);
-        }
-
-      }
-
-
-
-      &--is-active {
-
+      &::after {
+        background-color: var(--color-light);
       }
     }
   }
+}
