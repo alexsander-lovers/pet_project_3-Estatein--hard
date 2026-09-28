@@ -2,9 +2,10 @@
 
 :root {
   --color-light: #FFFFFF;
-  --color-light-transparency: #FFFFFF1A;
   --color-dark: #141414;
+  --color-light-transparency: #FFFFFF1A;
   --color-grey: #999999;
+  --color-grey-8: #191919;
   --color-grey-10: #262626;
   --color-grey-15: #1A1A1A;
   --color-grey-50: #808080;
@@ -14,6 +15,11 @@
   --color-another-accent: #FFE500;
   --color-error: #FF6347;
 
+  --box-shadow: 0 0 0 #{rem(8)} var(--color-grey-8);
+
+  @include mobile {
+    --box-shadow: 0 0 0 #{rem(4)} var(--color-grey-8);
+  }
 
   --font-family-base: 'Urbanist', sans-serif;
 

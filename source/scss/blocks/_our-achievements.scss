@@ -1,0 +1,55 @@
+@use 'helpers' as *;
+
+.our-achievements {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+    @include laptop {
+      row-gap: rem(50);
+    }
+
+    @include mobile {
+      row-gap: rem(40);
+    }
+  }
+
+  &__wrapper-text {
+    padding-right: rem(300);
+
+    @include laptop {
+      padding-right: rem(250);
+    }
+
+    @include mobile {
+      padding-right: rem(0);
+    }
+  }
+
+  &__list {
+    @include mobile {
+      row-gap: rem(20);
+    }
+  }
+
+  &__item {
+    box-shadow: var(--box-shadow);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+
+    @include laptop {
+      row-gap: rem(24);
+    }
+
+    @include mobile {
+      row-gap: rem(16);
+    }
+  }
+
+
+}

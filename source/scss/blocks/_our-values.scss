@@ -1,0 +1,149 @@
+@use 'helpers' as *;
+
+.our-values {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 37.5% 62.5%;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: rem(40);
+    }
+  }
+
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+    justify-content: center;
+    padding-right: rem(80);
+
+    @include laptop {
+      row-gap: rem(10);
+      padding-right: rem(60);
+    }
+
+    @include tablet {
+      padding-right: rem(0);
+    }
+
+    @include mobile {
+      row-gap: rem(8);
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(60);
+    padding: rem(60);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(12);
+    box-shadow: var(--box-shadow);
+
+    @include tablet-above {
+      &::after {
+        position: absolute;
+        content: '';
+        width: calc(100% - var(--container-padding-x));
+        height: rem(1);
+        background-color: var(--color-grey-10);
+
+        @include abs-center();
+      }
+    }
+
+    @include laptop {
+      gap: rem(48);
+      padding: rem(50);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile {
+      padding: rem(24);
+      row-gap: rem(40);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+
+    @include tablet-above {
+      position: relative;
+      &:nth-child(even) {
+        &::after {
+          position: absolute;
+          content: '';
+          width: rem(1);
+          height: 100%;
+          background-color: var(--color-grey-10);
+          left: rem(-30);
+        }
+      }
+    }
+
+    @include laptop {
+      row-gap: rem(16);
+    }
+
+    @include tablet {
+      position: relative;
+
+      &:not(:last-child) {
+
+          &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: rem(1);
+          background-color: var(--color-grey-10);
+          bottom: -20%;
+        }
+      }
+    }
+
+    @include mobile {
+      row-gap: rem(14);
+    }
+  }
+
+  &__wrapper-icon {
+    display: flex;
+    align-items: center;
+    column-gap: rem(14);
+
+    @include laptop {
+      column-gap: rem(10);
+    }
+
+    @include mobile {
+      column-gap: rem(8);
+    }
+  }
+
+  &__icon {
+    @include laptop {
+      width: rem(60);
+      height: rem(60);
+    }
+
+    @include mobile {
+      width: rem(52);
+      height: rem(52);
+    }
+  }
+
+  &__subtitle {
+    white-space: nowrap;
+
+    @include mobile-s {
+      white-space: normal;
+    }
+  }
+}
