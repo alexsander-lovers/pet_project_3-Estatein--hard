@@ -1,19 +1,26 @@
 @use 'helpers' as *;
 
 .questions {
-  display: flex;
-  flex-direction: column;
-  row-gap: rem(50);
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: rem(50);
 
-  @include laptop {
-    row-gap: rem(40);
+    @include laptop {
+      row-gap: rem(40);
+    }
+
+    @include tablet {
+      row-gap: rem(30);
+    }
   }
 
-  @include tablet {
-    row-gap: rem(30);
-  }
 
   &__button {
     color: var(--color-light);
+
+    @include tablet {
+      flex-grow: 1;
+    }
   }
 }

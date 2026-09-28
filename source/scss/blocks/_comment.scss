@@ -43,6 +43,27 @@
       mask-image: url('../images/icons/star.svg');
       background-color: var(--color-another-accent);
       mask-position: center;
+      mask-size: contain;
+    }
+
+    @include laptop {
+      width: rem(38);
+      height: rem(38);
+
+      &::before {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+
+    @include mobile {
+      width: rem(30);
+      height: rem(30);
+
+      &::before {
+        width: rem(18);
+        height: rem(18);
+      }
     }
 
     &:focus-visible {
@@ -59,17 +80,17 @@
     }
 
     &:focus-visible {
-        outline: rem(2) solid var(--color-dark);
-        border-color: var(--color-dark);
-        background-color: var(--color-dark);
-      }
+      outline: rem(2) solid var(--color-dark);
+      border-color: var(--color-dark);
+      background-color: var(--color-dark);
+    }
 
-      &:hover,
-      &:active {
-        outline: rem(2) solid var(--color-dark);
-        border-color: var(--color-dark);
-        background-color: var(--color-dark);
-      }
+    &:hover,
+    &:active {
+      outline: rem(2) solid var(--color-dark);
+      border-color: var(--color-dark);
+      background-color: var(--color-dark);
+    }
   }
 
   &__wrapper {
@@ -122,5 +143,13 @@
 
   &__name-person {
     color: var(--color-light);
+  }
+
+  &__img {
+    aspect-ratio: 60 / 60;
+
+    @include laptop {
+      aspect-ratio: 50 / 50;
+    }
   }
 }

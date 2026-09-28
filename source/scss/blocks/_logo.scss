@@ -8,4 +8,12 @@
   @include mobile {
     width: rem(94);
   }
+
+  &__img {
+    aspect-ratio: 160 / 48;
+
+    @include laptop {
+      aspect-ratio: 114 / 34;
+    }
+  }
 }

@@ -53,7 +53,7 @@
         </div>
         <div class="hero__wrapper-img">
           <div class="hero__inner-picture">
-            <picture>
+            <picture fetchpriority="high">
               <source type="image/avif" media="(max-width: 1024px)"
                 srcset="images/hero/hero-mobile-2.avif 1x, images/hero/hero-mobile-2@2x.avif 2x, images/hero/hero-mobile-2@3x.avif 3x">
               <source type="image/avif" media="(max-width: 1440px)"
@@ -73,7 +73,7 @@
               <source type="image/png"
                 srcset="images/hero/hero-desktop-2.png 1x, images/hero/hero-desktop-2@2x.png 2x, images/hero/hero-desktop-2@3x.png 3x">
               <img class="hero__img" src="images/hero/hero-desktop-2.png" width="920" height="814"
-                alt="Example of a multi-story office building project Estatein">
+                alt="Example of a multi-story office building project Estatein" fetchpriority="high">
             </picture>
           </div>
         </div>
@@ -117,15 +117,15 @@
         </ul>
       </div>
     </section>
-    <section class="properties">
-      <div class="properties__container container container-gap">
-        <div class="properties__wrapper-text">
+    <section class="properties" id="properties">
+      <div class="properties__container container container-style">
+        <div class="properties__wrapper-text container-style__wrapper-text">
           <h2 class="properties__title stars-top-title">Featured Properties</h2>
-          <div class="properties__inner">
+          <div class="properties__inner container-style__inner">
             <p class="properties__subtext">Explore our handpicked selection of featured properties. Each listing offers
               a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more
               information.</p>
-            <a class="properties__link button-another button-another--section button-another--is-hidden"
+            <a class="properties__link container-style__link button-another button-another--section button-another--is-hidden "
               href="properties.html">View All
               Properties</a>
           </div>
@@ -344,14 +344,15 @@
       </div>
     </section>
     <section class="testimonials" id="testimonials">
-      <div class="testimonials__container container container-gap">
-        <div class="testimonials__wrapper-text">
+      <div class="testimonials__container container container-style">
+        <div class="testimonials__wrapper-text container-style__wrapper-text">
           <h2 class="testimonials__title stars-top-title">What Our Clients Say</h2>
-          <div class="testimonials__inner">
+          <div class="testimonials__inner container-style__inner">
             <p class="testimonials__subtext">Read the success stories and heartfelt testimonials from our valued
               clients. Discover why they chose Estatein for their real estate needs.
             </p>
-            <a class="testimonials__link button-another button-another--section button-another--is-hidden" href="#">View
+            <a class="testimonials__link container-style__link button-another button-another--section button-another--is-hidden"
+              href="#">View
               All
               Testimonials</a>
           </div>
@@ -500,21 +501,22 @@
         </div>
       </div>
     </section>
-    <section class="faq">
-      <div class="faq__container container container-gap">
-        <div class="faq__wrapper-text">
+    <section class="faq" id="faq">
+      <div class="faq__container container container-style">
+        <div class="faq__wrapper-text container-style__wrapper-text">
           <h2 class="faq__title stars-top-title">Frequently Asked Questions</h2>
-          <div class="faq__inner">
+          <div class="faq__inner container-style__inner">
             <p class="faq__subtext">Find answers to common questions about Estatein's services, property listings, and
               the real estate process. We're here to provide clarity and assist you every step of the way.
             </p>
-            <a class="faq__link button-another button-another--section button-another--is-hidden" href="#">View All
+            <a class="faq__link container-style__link button-another button-another--section button-another--is-hidden"
+              href="properties-details.html#faq">View All
               FAQ’s</a>
           </div>
         </div>
         <div class="faq__questions questions">
           <ul class="questions__list list">
-            <li class="questions__list list__item">
+            <li class="questions__item list__item">
               <h3 class="questions__subtitle">How do I search for properties on Estatein?</h3>
               <div class="questions__subtext">
                 <span>Learn how to use our user-friendly search tools to find properties that match your
@@ -526,7 +528,7 @@
               <button class="questions__button button-another button-another--section" type="button"
                 data-js-button-open-text>Read More</button>
             </li>
-            <li class="questions__list list__item">
+            <li class="questions__item list__item">
               <h3 class="questions__subtitle">What documents do I need to sell my property through Estatein?</h3>
               <div class="questions__subtext">
                 <span>Find out about the necessary documentation for listing your property with us.</span>
@@ -537,7 +539,7 @@
               <button class="questions__button button-another button-another--section" type="button"
                 data-js-button-open-text>Read More</button>
             </li>
-            <li class="questions__list list__item">
+            <li class="questions__item list__item">
               <h3 class="questions__subtitle">How can I contact an Estatein agent?</h3>
               <div class="questions__subtext">
                 <span>Discover the different ways you can get in touch with our experienced agents.</span>

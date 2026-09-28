@@ -20,6 +20,8 @@
     z-index: -5;
     top: 0;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: image-set(
         url('../images/header/header-bg-desktop.avif') type('image/avif') 1x,
         url('../images/header/header-bg-desktop@2x.avif') type('image/avif') 2x,

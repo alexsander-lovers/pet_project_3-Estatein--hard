@@ -35,7 +35,12 @@
 
   &__img {
     width: 100%;
+    aspect-ratio: 432 / 318;
     border-radius: rem(12);
+
+    @include laptop {
+      aspect-ratio: 354 / 255;
+    }
   }
 
   &__content {
@@ -48,10 +53,9 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: rem(10);
 
-    @include laptop {
-      column-gap: rem(6);
+    @include mobile {
+      justify-content: space-between;
     }
   }
 
@@ -62,10 +66,17 @@
     padding: rem(8) rem(14);
     background-color: var(--color-grey-15);
     border: rem(1) solid var(--color-grey-10);
+    color: var(--color-light);
     border-radius: rem(28);
 
     @include laptop {
       padding-block: rem(6);
+    }
+  }
+
+  &__icon {
+    @include laptop {
+      width: rem(20);
     }
   }
 

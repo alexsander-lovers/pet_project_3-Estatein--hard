@@ -1,7 +1,22 @@
 @use 'helpers' as *;
 
-.testimonials {
-  &__wrapper-text {
+.container-style {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(150);
+    row-gap: rem(80);
+
+    @include laptop {
+      padding-top: rem(120);
+      row-gap: rem(60);
+    }
+
+    @include mobile {
+      padding-top: rem(80);
+      row-gap: rem(40);
+    }
+
+    &__wrapper-text {
     display: flex;
     flex-direction: column;
     row-gap: rem(14);

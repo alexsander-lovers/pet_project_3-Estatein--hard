@@ -6,7 +6,78 @@
 
 <body>
   @@include('html_components/header__properties.html')
-  <main>
+  <main class="main">
+    <section class="faq">
+      <div class="faq__container container container-style">
+        <div class="faq__wrapper-text container-style__wrapper-text">
+          <h2 class="faq__title stars-top-title">Frequently Asked Questions</h2>
+          <div class="faq__inner container-style__inner">
+            <p class="faq__subtext">Find answers to common questions about Estatein's services, property listings, and
+              the real estate process. We're here to provide clarity and assist you every step of the way.
+            </p>
+            <a class="faq__link container-style__link button-another button-another--section button-another--is-hidden"
+              href="properties-details.html#faq">View All
+              FAQ’s</a>
+          </div>
+        </div>
+        <div class="faq__questions questions">
+          <ul class="questions__list list">
+            <li class="questions__item list__item">
+              <h3 class="questions__subtitle">How do I search for properties on Estatein?</h3>
+              <div class="questions__subtext">
+                <span>Learn how to use our user-friendly search tools to find properties that match your
+                  criteria.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Learn how to use our user-friendly search tools to find properties that match your criteria.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+            <li class="questions__item list__item">
+              <h3 class="questions__subtitle">What documents do I need to sell my property through Estatein?</h3>
+              <div class="questions__subtext">
+                <span>Find out about the necessary documentation for listing your property with us.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Find out about the necessary documentation for listing your property with us.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+            <li class="questions__item list__item">
+              <h3 class="questions__subtitle">How can I contact an Estatein agent?</h3>
+              <div class="questions__subtext">
+                <span>Discover the different ways you can get in touch with our experienced agents.</span>
+                <span class="questions__subtext-more questions__subtext-more--hidden" data-js-text-hidden>
+                  Discover the different ways you can get in touch with our experienced agents.
+                </span>
+              </div>
+              <button class="questions__button button-another button-another--section" type="button"
+                data-js-button-open-text>Read More</button>
+            </li>
+          </ul>
+          <nav class="faq__navigation block-navigation">
+            <a class="faq__link button-another button-another--section button-another--is-mobile" href="#">View All
+              Testimonials</a>
+            <div class="block-navigation__counter" aria-live="polite">
+              <span class="block-navigation__current block-navigation__current--is-active" data-js-pag-current>01</span>
+              <span class="block-navigation__divider">of</span>
+              <span class="block-navigation__total" data-js-pag-total>10</span>
+            </div>
+            <div class="block-navigation__controls">
+              <button class="block-navigation__button block-navigation__button--prev" type="button" data-js-pag-prev
+                aria-label="Previous page">
+              </button>
+              <button
+                class="block-navigation__button block-navigation__button--next block-navigation__button--is-active"
+                type="button" data-js-pag-next aria-label="Next page">
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
   </main>
   @@include('html_components/footer.html')
   <script src="js/app.min.js" defer></script>

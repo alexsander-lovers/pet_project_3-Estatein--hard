@@ -30,6 +30,7 @@
     border-radius: rem(12);
 
     @include laptop {
+      max-width: rem(413);
       padding: rem(40);
     }
 

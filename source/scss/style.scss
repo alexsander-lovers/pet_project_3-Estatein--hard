@@ -16,16 +16,13 @@
 @use 'blocks/achievements-block';
 @use 'blocks/features';
 @use 'blocks/list';
-@use 'blocks/properties';
-@use 'blocks/container-gap';
+@use 'blocks/container-style';
 @use 'blocks/stars-top-title';
 @use 'blocks/card';
 @use 'blocks/block-navigation';
-@use 'blocks/testimonials';
 @use 'blocks/comment';
 @use 'blocks/faq';
 @use 'blocks/questions';
-
 
 @use 'blocks/footer';
 @use 'blocks/form-footer';
@@ -37,6 +34,7 @@
 // .hero,
 // .features,
 // .properties,
-// .testimonials {
+// .testimonials,
+// .faq {
 //   display: none;
 // }
