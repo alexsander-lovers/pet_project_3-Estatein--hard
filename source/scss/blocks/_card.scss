@@ -120,14 +120,12 @@
     &:focus-visible {
     outline: rem(2) solid var(--color-another-accent);
     color:  var(--color-another-accent);
-
     }
 
     &:hover,
     &:active {
       outline: rem(2) solid var(--color-another-accent);
       color:  var(--color-another-accent);
-
     }
   }
 }

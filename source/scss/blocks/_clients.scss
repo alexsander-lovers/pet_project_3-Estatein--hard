@@ -1,0 +1,21 @@
+@use 'helpers' as *;
+
+.clients {
+  &__container {
+    padding-bottom: rem(150);
+
+    @include laptop {
+      padding-bottom: rem(120);
+    }
+
+    @include mobile {
+      padding-bottom: rem(80);
+    }
+  }
+
+  &__navigation {
+    @include mobile {
+      justify-content: space-between;
+    }
+  }
+}

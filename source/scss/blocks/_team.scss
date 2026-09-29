@@ -1,0 +1,144 @@
+@use 'helpers' as *;
+
+.team {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+    @include laptop {
+      row-gap: rem(50);
+    }
+
+    @include mobile {
+      row-gap: rem(40);
+    }
+  }
+
+  &__list {
+    display: grid;
+    width: 100%;
+
+    @include laptop-above {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: rem(30);
+    }
+
+    @include laptop {
+      gap: rem(20);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-content: center;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    word-break: break-word;
+    overflow: hidden;
+
+    padding: rem(30);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(12);
+
+    @include laptop-above {
+      padding: rem(30);
+    }
+
+    @include laptop {
+      padding: rem(24);
+    }
+
+    @include tablet {
+      padding: rem(20);
+      justify-self: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+
+    @include tablet {
+      row-gap: rem(40);
+    }
+  }
+
+  &__inner-img {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: rem(76);
+      height: rem(52);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../images/icons/team-icon-1.svg');
+      bottom: 0;
+      left: 50%;
+      translate: -50% 50%;
+
+      @include laptop {
+        width: rem(60);
+        height: rem(40);
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: rem(12);
+    aspect-ratio: 317 / 253;
+  }
+
+  &__inner-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+  }
+
+  &__inner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__inner-link-body {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: rem(100);
+    flex-grow: 1;
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    @include laptop {
+      width: rem(36);
+      height: rem(36);
+    }
+
+    @include tablet {
+      width: rem(44);
+      height: rem(44);
+    }
+  }
+}

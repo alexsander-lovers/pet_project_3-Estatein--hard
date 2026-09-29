@@ -49,15 +49,10 @@
   }
 }
 
-.burger-menu:focus-visible {
-  outline: rem(2) solid var(--color-another-accent);
-  border-color: var(--color-another-accent);
-  background-color: var(--color-accent);
-}
-
+.burger-menu:focus-visible,
 .burger-menu:hover,
 .burger-menu:active {
   background-color: var(--color-accent);
   outline: rem(2) solid var(--color-another-accent);
-  border-color: var(--color-another-accent);
+  border: rem(1) solid var(--color-another-accent);
 }

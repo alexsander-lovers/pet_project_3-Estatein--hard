@@ -8,18 +8,14 @@
   border-radius: rem(10);
   white-space: nowrap;
 
-  &:focus-visible {
-    outline: rem(2) solid var(--color-another-accent);
-    color: var(--color-light);
-  }
-
   &:visited {
     color: var(--color-light);
   }
-
+  &:focus-visible,
   &:hover,
   &:active {
     outline: rem(2) solid var(--color-another-accent);
+    border: rem(1) solid var(--color-another-accent);
     color: var(--color-light);
   }
 }

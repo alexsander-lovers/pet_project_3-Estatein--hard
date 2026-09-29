@@ -18,6 +18,9 @@
     }
 
   &__item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: rem(512);
     min-width: rem(358);
