@@ -4,7 +4,7 @@
   background-color: var(--color-accent);
   color: var(--color-light);
   padding: rem(18) rem(24);
-  border: none;
+  border: rem(1) solid var(--color-accent);
   border-radius: rem(10);
   white-space: nowrap;
 

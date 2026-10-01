@@ -9,7 +9,7 @@ export const convertToAvif = () => {
     ))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.plugins.if(app, avif({ quality: 70 })))
+    .pipe(app.plugins.if(app, avif({ quality: 45 })))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };
@@ -21,7 +21,7 @@ export const convertToWebp = () => {
     ))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.plugins.if(app, webp({ quality: 70 })))
+    .pipe(app.plugins.if(app, webp({ quality: 65 })))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };

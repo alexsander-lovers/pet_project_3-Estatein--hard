@@ -13,7 +13,7 @@
 
     @include tablet {
       gap: rem(10);
-      grid-template-columns: repeat(auto-fit, minmax(rem(312), rem(512)));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
       justify-content: center;
     }
 
@@ -22,8 +22,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: rem(512);
-    min-width: rem(358);
 
     word-break: break-word;
     overflow: hidden;
@@ -33,7 +31,6 @@
     border-radius: rem(12);
 
     @include laptop {
-      max-width: rem(413);
       padding: rem(40);
     }
 
