@@ -33,6 +33,17 @@
     }
   }
 
+  &__wrapper-subtext {
+    padding: rem(8) rem(14);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(28);
+    color: var(--color-light);
+
+    @include laptop {
+      padding: rem(6) rem(12);
+    }
+  }
+
   &__img {
     width: 100%;
     aspect-ratio: 432 / 318;
