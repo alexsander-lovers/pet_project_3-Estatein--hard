@@ -60,16 +60,17 @@ input::placeholder {
   color: var(--color-grey)
 }
 
-input:focus-visible {
-  outline: rem(2) solid var(--color-another-accent);
+input {
+  color: var(--color-light);
+  cursor: pointer;
 }
 
+input:focus-visible ,
 input:hover,
 input:active,
 input:focus {
   outline: rem(2) solid var(--color-another-accent);
 }
-
 
 input:disabled {
   outline: rem(2) solid var(--color-error);

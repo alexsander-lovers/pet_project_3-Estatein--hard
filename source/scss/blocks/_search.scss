@@ -1,0 +1,8 @@
+@use 'helpers' as *;
+
+.search {
+  @include tablet-above {
+    position: relative;
+    top: rem(-50);
+  }
+}

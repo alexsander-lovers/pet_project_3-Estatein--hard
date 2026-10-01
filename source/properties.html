@@ -7,6 +7,104 @@
 <body>
   @@include('html_components/header__properties.html')
   <main class="main">
+    <section class="hero-properties hero-repeated">
+      <h1 class="visually-hidden">Property Estatein</h1>
+      <div class="hero-repeated__container container">
+        <div class="hero-repeated__wrapper">
+          <h2 class="hero-repeated__title">Find Your Dream Property</h2>
+          <p class="hero-repeated__subtitle">Welcome to Estatein, where your dream property awaits in every corner of
+            our beautiful world. Explore our curated selection of properties, each offering a unique story and a chance
+            to redefine your life. With categories to suit every dreamer, your journey.</p>
+        </div>
+      </div>
+    </section>
+    <section class="search">
+      <h2 class="visually-hidden">Search</h2>
+      <div class="search__container container">
+        <div class="search__wrapper form-secondary">
+          <form class="form-secondary__search" action="/search" method="get" role="search">
+            <div class="form-secondary__wrapper">
+              <div class="form-secondary__search-container">
+                <div class="form-secondary__search-main">
+                  <label class="visually-hidden" for="form__search-field">Site search</label>
+                  <input class="form-secondary__search-field-main" id="form__search-field" type="text" name="search"
+                    placeholder="Search For A Property" required>
+                  <button class="form-secondary__button button" type="submit">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use href="images/icons/sprite/icons.svg#search" />
+                    </svg>
+                    <span class="form-secondary__button-text">Find Property</span>
+                  </button>
+                </div>
+              </div>
+              <div class="form-secondary__search-filter">
+                <fieldset class="form-secondary__search-fieldset">
+                  <legend class="visually-hidden">Search filters</legend>
+                  <ul class="form-secondary__search-list">
+                    <li class="form-secondary__search-item">
+                      <label class="visually-hidden" for="location">Location</label>
+                      <input class="form-secondary__search-field" type="text" list="locations" id="location"
+                        name="location" placeholder="Location">
+                      <datalist id="locations">
+                        <option value="Moscow">
+                        <option value="London">
+                        <option value="Helsinki">
+                        <option value="Berlin">
+                      </datalist>
+                      <span class="form-secondary__search-style" aria-hidden="true"></span>
+                    </li>
+                    <li class="form-secondary__search-item">
+                      <label class="visually-hidden" for="propertyType">Property_Type</label>
+                      <input class="form-secondary__search-field" type="text" list="type" id="propertyType"
+                        name="Property Type" placeholder="Property Type">
+                      <datalist id="type">
+                        <option value="Large">
+                        <option value="Medium">
+                        <option value="Small">
+                      </datalist>
+                      <span class="form-secondary__search-style" aria-hidden="true"></span>
+                    </li>
+                    <li class="form-secondary__search-item">
+                      <label class="visually-hidden" for="pricingRange">Pricing Range</label>
+                      <input class="form-secondary__search-field" type="text" list="pricing" id="pricingRange"
+                        name="Pricing_Range" placeholder="Pricing Range">
+                      <datalist id="pricing">
+                        <option value="High prices">
+                        <option value="Average prices">
+                        <option value="Low prices">
+                      </datalist>
+                      <span class="form-secondary__search-style" aria-hidden="true"></span>
+                    </li>
+                    <li class="form-secondary__search-item">
+                      <label class="visually-hidden" for="propertySize">Property Size</label>
+                      <input class="form-secondary__search-field" type="text" list="size" id="propertySize"
+                        name="Property_Size" placeholder="Property Size">
+                      <datalist id="size">
+                        <option value="150 м²"></option>
+                        <option value="390 м²"></option>
+                        <option value="1700 м²"></option>
+                      </datalist>
+                      <span class="form-secondary__search-style" aria-hidden="true"></span>
+                    </li>
+                    <li class="form-secondary__search-item">
+                      <label class="visually-hidden" for="buildYear">Build Year</label>
+                      <input class="form-secondary__search-field" type="text" list="year" id="buildYear"
+                        name="Build _Year" placeholder="Build Year">
+                      <datalist id="year">
+                        <option value="2026">
+                        <option value="2025">
+                        <option value="2024">
+                      </datalist>
+                      <span class="form-secondary__search-style" aria-hidden="true"></span>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   @@include('html_components/footer.html')
   <script src="js/app.min.js" defer></script>

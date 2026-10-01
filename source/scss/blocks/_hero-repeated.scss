@@ -1,0 +1,25 @@
+@use 'helpers' as *;
+
+.hero-repeated {
+  background: linear-gradient(95deg, var(--color-grey-10) -27%, var(--color-rgba-1) 40%);
+  &__container {
+    padding-block: rem(150);
+
+    @include laptop {
+      padding-block: rem(100);
+    }
+
+    @include tablet {
+      padding-block: rem(50);
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+  }
+}

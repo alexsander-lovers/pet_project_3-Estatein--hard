@@ -31,18 +31,11 @@
 @use 'blocks/team';
 @use 'blocks/clients';
 
+@use 'blocks/hero-repeated';
+@use 'blocks/search';
+@use 'blocks/form-secondary';
 
 @use 'blocks/footer';
 @use 'blocks/form-footer';
 @use 'blocks/footer-navigation';
 @use 'blocks/copyright';
-
-// .header,
-// .footer,
-// .hero,
-// .features,
-// .properties,
-// .testimonials,
-// .faq {
-//   display: none;
-// }
