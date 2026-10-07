@@ -56,27 +56,35 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
-input::placeholder {
-  color: var(--color-grey)
-}
-
-input {
+input,
+textarea {
   color: var(--color-light);
   cursor: pointer;
 }
 
-input:focus-visible ,
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-grey)
+}
+
+input:focus-visible,
+textarea:focus-visible,
 input:hover,
+textarea:hover,
 input:active,
-input:focus {
+textarea:active,
+input:focus,
+textarea:focus {
   outline: rem(2) solid var(--color-another-accent);
 }
 
-input:disabled {
+input:disabled,
+textarea:disabled {
   outline: rem(2) solid var(--color-error);
 }
 
 input:disabled,
+textarea:disabled,
 button:disabled {
   opacity: 0.5;
 }

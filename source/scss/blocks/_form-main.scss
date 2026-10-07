@@ -1,0 +1,281 @@
+@use 'helpers' as *;
+
+.form-main {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: rem(100);
+    row-gap: rem(50);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(12);
+
+    @include laptop {
+      padding: rem(50);
+      row-gap: rem(30);
+    }
+
+    @include tablet {
+      padding: rem(20);
+      row-gap: rem(20);
+    }
+  }
+
+  &__list {
+    display: grid;
+    @include laptop-above {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(30);
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(30);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list-another {
+    display: grid;
+    @include laptop-above {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(30);
+    }
+
+    @include tablet {
+      row-gap: rem(20);
+    }
+  }
+
+  &__inner-list {
+    display: flex;
+    column-gap: rem(30);
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+  }
+
+  &__inner-item {
+    flex-grow: 1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(14);
+    }
+
+    @include tablet {
+      row-gap: rem(10);
+    }
+  }
+
+  &__field {
+    width: 100%;
+    padding: rem(24) rem(20);
+    background-color: var(--color-grey-15);
+    border: none;
+    border-radius: rem(6);
+
+    @include laptop {
+      padding: rem(16) rem(20);
+    }
+
+    &--padding {
+      padding-left: rem(60);
+
+      @include laptop {
+      padding-left: rem(46);
+      }
+    }
+  }
+
+  &__inner-item {
+
+    &--phone,
+    &--email {
+      position: relative;
+    }
+
+    &--phone {
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(24);
+        height: rem(24);
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem(16);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../images/icons/phone-icon.svg');
+
+        @include laptop {
+          width: rem(20);
+          height: rem(20);
+        }
+      }
+    }
+
+    &--email {
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(24);
+        height: rem(24);
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem(16);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../images/icons/email-icon.svg');
+
+        @include laptop {
+          width: rem(20);
+          height: rem(20);
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(12);
+    user-select: none;
+  }
+
+  &__checkbox-style {
+    position: relative;
+    display: inline-block;
+    width: rem(28);
+    height: rem(28);
+    flex-shrink: 0;
+    background-color: var(--color-grey-15);
+    border: rem(1) solid var(--color-grey-10);
+    border-radius: rem(4);
+
+    @include laptop {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
+&__title:focus-visible &__checkbox-style,
+&__title:hover &__checkbox-style,
+&__title:active &__checkbox-style,
+&__title:focus &__checkbox-style {
+  border-color: var(--color-another-accent);
+  outline: rem(2) solid var(--color-another-accent);
+}
+
+.visually-hidden:checked + &__checkbox-style {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+  &__checkbox-style::after {
+    content: "";
+    position: absolute;
+    left: rem(11);
+    top: rem(6);
+    width: rem(5);
+    height: rem(10);
+    border: solid var(--color-another-accent);
+    border-width: 0 rem(2) rem(2) 0;
+    transform: rotate(45deg) scale(0);
+    transform-origin: center;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include laptop {
+      left: rem(8);
+      top: rem(5);
+    }
+  }
+
+  .visually-hidden:checked + .form-main__checkbox-style::after {
+    transform: rotate(45deg) scale(1);
+  }
+
+
+  &__wrapper-another {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+  }
+
+  &__field--arrow::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    background: transparent;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__wrapper--arrow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field--arrow {
+    padding-right: rem(40);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__style {
+    position: absolute;
+    right: rem(20);
+    bottom: rem(25);
+    width: rem(24);
+    height: rem(24);
+    background-image: url("../images/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 3;
+
+    @include laptop {
+      width: rem(20);
+      height: rem(20);
+    }
+
+    @include tablet {
+      bottom: rem(15);
+    }
+  }
+
+  &__wrapper-button {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

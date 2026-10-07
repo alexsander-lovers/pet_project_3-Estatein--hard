@@ -1,0 +1,15 @@
+@use 'helpers' as *;
+
+.contact {
+  &__container {
+    padding-bottom: rem(150);
+
+    @include laptop {
+      padding-bottom: rem(120);
+    }
+
+    @include tablet {
+      padding-bottom: rem(80);
+    }
+  }
+}
